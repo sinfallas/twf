@@ -6,9 +6,9 @@ trap "rm -f /run/$(basename $0).pid; exit" 0 1 2 3 15
 echo "$BASHPID" > /run/"$(basename $0)".pid
 
 if ! [[ -f /root/.puerto ]]; then
-	echo "net.ipv4.conf.all.accept_redirects = 0" >> /etc/sysctl.conf
-	echo "net.ipv4.conf.all.send_redirects = 0" >> /etc/sysctl.conf
-	echo "net.ipv4.conf.all.forwarding = 0" >> /etc/sysctl.conf
+	echo "net.ipv4.conf.all.accept_redirects = 1" >> /etc/sysctl.conf
+	echo "net.ipv4.conf.all.send_redirects = 1" >> /etc/sysctl.conf
+	echo "net.ipv4.conf.all.forwarding = 1" >> /etc/sysctl.conf
 	sysctl -p
 	touch /root/.puerto
 fi
