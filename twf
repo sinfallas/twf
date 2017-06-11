@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Made by Sinfallas <sinfallas@yahoo.com>
+# Licence: GPL-2
+LC_ALL=C
+trap "rm -f /run/$(basename $0).pid; exit" 0 1 2 3 15
+echo "$BASHPID" > /run/"$(basename $0)".pid
+
+if ! [[ -f /root/.puerto ]]; then
+	echo "net.ipv4.conf.all.accept_redirects = 0" >> /etc/sysctl.conf
+	echo "net.ipv4.conf.all.send_redirects = 0" >> /etc/sysctl.conf
+	echo "net.ipv4.conf.all.forwarding = 0" >> /etc/sysctl.conf
+	sysctl -p
+	touch /root/.puerto
+fi
+
+if [[ -z $2 ]]; then
+	iptables -t nat -A PREROUTING -p tcp -i $1 --dport 5938 -j DNAT --to-destination $2:5938
+	iptables -A FORWARD -p tcp -d $2 --dport 5938 -m state --state NEW,ESTABLISHED,RELATED -j ACCEPT
+else
+	echo "uso: $(basename $0) interfaz IP-local"
+	echo "Ejemplo: "	
+	echo "$(basename $0) eth0 192.168.0.200"
+fi
+
+rm -f /run/$(basename $0).pid
+exit 0
