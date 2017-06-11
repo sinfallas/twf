@@ -1,4 +1,16 @@
-commit f8b1e028dbb9eea211a51dfb09ae4f1b450e6530 (HEAD, origin/master, origin/HEAD, master)
+commit 46751e86dd442554c3cc843ae5a889616aeb2e42 (HEAD, origin/master, origin/HEAD, master)
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Jun 11 18:57:34 2017 -0400
+
+    * se activa la funcion de redireccion
+
+commit 3423fc92f3af957e12be02d446285beb54749ba6
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sun Jun 11 18:48:51 2017 -0400
+
+    * changelog
+
+commit f8b1e028dbb9eea211a51dfb09ae4f1b450e6530
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sun Jun 11 18:48:32 2017 -0400
 
