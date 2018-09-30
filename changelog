@@ -1,4 +1,16 @@
-commit 4292c4cfd2feba91a3c592c4feea94b436c5fd63 (HEAD -> master, origin/master, origin/HEAD)
+commit 897f831f7eab1199e5fb0db6f8eb858714a51258 (HEAD -> master, origin/master, origin/HEAD)
+Author: Jose Perez <sinfallas@users.noreply.github.com>
+Date:   Sat Mar 10 21:51:07 2018 -0400
+
+    Update README.md
+
+commit 501f6a5fa96eb013abb36eae449e433977ca5e7b
+Author: jose perez <sinfallas@gmail.com>
+Date:   Sat Mar 10 21:49:22 2018 -0400
+
+    * changelog
+
+commit 4292c4cfd2feba91a3c592c4feea94b436c5fd63
 Author: jose perez <sinfallas@gmail.com>
 Date:   Sat Mar 10 21:49:08 2018 -0400
 
